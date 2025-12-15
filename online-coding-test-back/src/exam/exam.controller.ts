@@ -21,13 +21,9 @@ export class ExamController {
 
         const { id, fileName, ext, msg } = saveResult
 
-        console.log(id, fileName, ext, msg)
+        const executeResult = await this.containerService.runContainer(`container_${ext}:latest`, fileName || 'test.js')
 
-        // const executeResult = await this.containerService.runContainer(`container_${ext}:latest`, fileName || 'test.js')
-
-        // console.log(executeResult)
-
-        // return { id: id, fileName: fileName, msg: executeResult?.message || 'test' }
-        return { id: id, fileName: fileName, msg: 'test' }
+        return { id: id, fileName: fileName, msg: executeResult?.message || 'test' }
+        // return { id: id, fileName: fileName, msg: 'test' }
     }
 }

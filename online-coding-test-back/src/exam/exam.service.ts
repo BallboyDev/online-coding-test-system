@@ -20,7 +20,7 @@ export class ExamService {
             'sql': 'sql',
         };
 
-        const fileExtension = extensions[lang.toLowerCase()] || 'txt'; // Default to .txt if lang is not recognized
+        const fileExtension = extensions[lang.toLowerCase()] || 'txt';
         const filename = `test.${fileExtension}`;
         const formData = new FormData();
         formData.append('file', new Blob([code], { type: 'text/plain' }), filename);
