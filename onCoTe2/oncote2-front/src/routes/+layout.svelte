@@ -1,0 +1,16 @@
+<script lang="ts">
+	import favicon from "$lib/assets/favicon.svg";
+	import { onMount } from "svelte";
+
+	let { children } = $props();
+
+	onMount(() => {
+		console.log("onCoTe2 / Layout");
+	});
+</script>
+
+<svelte:head>
+	<link rel="icon" href={favicon} />
+</svelte:head>
+
+{@render children()}
