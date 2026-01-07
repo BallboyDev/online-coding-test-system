@@ -3,6 +3,7 @@
     import SplitHorizon from "$lib/images/splitHorizon.svg";
     import SplitVerticalRight from "$lib/images/splitVerticalRight.svg";
     import SplitVerticalLeft from "$lib/images/splitVerticalLeft.svg";
+    import CodeMirror from "$lib/features/codeMirror/CodeMirror.svelte";
 
     let excutePos = $state(true);
     let showQuizArea = $state(true);
@@ -32,8 +33,8 @@
     <div
         class={`d-flex ${excutePos ? "flex-column" : "flex-row"} flex-fill position-relative`}
     >
-        <div class="code flex-fill position-relative">
-            <ButtonGroup class="position-absolute top-0 end-0 m-2">
+        <div class="code flex-fill position-relative overflow-hidden">
+            <ButtonGroup class="position-absolute top-0 end-0 m-2 z-3">
                 <Button
                     size="sm"
                     onclick={() => {
@@ -63,6 +64,10 @@
                     />
                 </Button>
             </ButtonGroup>
+
+            <div class=" h-100 overflow-scroll">
+                <CodeMirror />
+            </div>
         </div>
         <div
             class={`excute ${excutePos ? "eh" : "ew"} position-relative  ${showExcuteArea ? "d-flex" : "d-none"}`}
@@ -143,6 +148,8 @@
     .code {
     }
     .excute {
+        flex: none;
+
         &.eh {
             max-height: 50% !important;
             min-height: 10% !important;
