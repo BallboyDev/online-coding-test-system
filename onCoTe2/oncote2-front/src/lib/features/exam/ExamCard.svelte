@@ -8,12 +8,13 @@
     <div class="e-index text-start">{exam.index}</div>
     <div class="e-title text-start">{exam.title}</div>
     <div class="e-period text-center">
-        <div>{exam.date?.start || "-"}</div>
+        <div>{exam.period?.start || "-"}</div>
         <div>~</div>
-        <div>{exam.date?.end || "-"}</div>
+        <div>{exam.period?.end || "-"}</div>
     </div>
     <div class="e-count text-center">
-        {exam.examinee.finish} / {exam.examinee.total}
+        {exam.count}
+        <!-- {exam.examinee.finish} / {exam.examinee.total} -->
     </div>
     <div class="e-btn text-center">
         <ButtonGroup vertical>

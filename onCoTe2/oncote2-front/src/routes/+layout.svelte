@@ -4,9 +4,7 @@
 
 	let { children } = $props();
 
-	onMount(() => {
-		console.log("onCoTe2 / Layout");
-	});
+	onMount(() => {});
 </script>
 
 <svelte:head>

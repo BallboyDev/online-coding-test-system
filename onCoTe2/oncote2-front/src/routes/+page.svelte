@@ -2,9 +2,7 @@
     import { Button, Input } from "@sveltestrap/sveltestrap";
     import { onMount } from "svelte";
 
-    onMount(() => {
-        console.log("onCoTe2 / Page");
-    });
+    onMount(() => {});
 </script>
 
 <div class="box border p-3 mx-auto rounded">

@@ -7,18 +7,14 @@
     let indexCursor = $state(false);
     let checked = $state(false);
 
-    $inspect(quiz);
-
     onMount(() => {
         checked = checkedList.includes(quiz.index);
     });
 
     const setCheckedList = () => {
         if (checked) {
-            console.log("true >>", checkedList.includes(quiz.index));
             checkedList = [...checkedList, quiz.index];
         } else {
-            console.log("false >>", checkedList.includes(quiz.index));
             checkedList = checkedList.filter((l: string) => l !== quiz.index);
         }
     };

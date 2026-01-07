@@ -3,7 +3,6 @@ import { CreateExamineeDto } from './dto/create-examinee.dto';
 import { Examinee, ExamineeDocument } from './schemas/examinee.schemas';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import { create } from 'domain';
 
 
 @Injectable()

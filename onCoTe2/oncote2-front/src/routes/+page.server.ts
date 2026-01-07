@@ -3,11 +3,6 @@ import type { Actions } from "@sveltejs/kit";
 
 export const actions = {
     test: async () => {
-
-        console.log('Test action triggered');
-
         const result = await fetch(`${API_BASE_URL}`)
-
-        console.log(result)
     }
 } satisfies Actions;
